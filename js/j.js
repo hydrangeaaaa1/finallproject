@@ -81,7 +81,7 @@ function doShowAll() {
         //Bind the data to HTML table.
         //You can use jQuery, too.
         document.getElementById('list').innerHTML = list;
-        document.getElementById('total').innerHTML = to;
+        document.getElementById('total').innerHTML = `${to} KD`;
     } else {
         alert('Cannot save shopping list as your browser does not support HTML 5');
     }
