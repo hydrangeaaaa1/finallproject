@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daily shop</title>
+    <!-- أيقونة الموقع -->
+  <link rel="icon" href="./img/Screen Shot 2021-01-14 at 3.39.03 AM.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--  Bootstrap css file  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!--  font awesome icons  -->
+    <link rel="stylesheet" href="./css/all.min.css">
+
+
+    <!--  Magnific Popup css file  -->
+    <link rel="stylesheet" href="./vendor/Magnific-Popup/dist/magnific-popup.css">
+
+
+    <!--  Owl-carousel css file  -->
+    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
+
+
+    <!--  custom css file  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--  Responsive css file  -->
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+
+    <style>
+        #anim {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .vvv{
+            background: image();
+        }
+
+        svg {
+  height: 90vmin;
+  left: calc(50% - 50vmin);
+  position: absolute;
+  width: 90vmin;
+}
+.fonty{
+    font-family: 'Bebas Neue', cursive;
+  font-weight: 100px;
+}
+.fonty2{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+}
+.artline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  /* background-color: cornflowerblue; */
+  background: url(./img/WomanPaints.jpeg) no-repeat 90%;
+}
+.war{
+    position: relative;
+    z-index: -1;
+
+}
+
+.svg2 {
+ width: 300px;
+ /* margin: auto; */
+}
+
+.svg2 path {
+ stroke-dashoffset: 3000;
+ stroke-dasharray: 3000;
+ animation: dash 5s cubic-bezier(.5, .5, 1, 0.5) forwards;
+}
+
+@keyframes dash {
+ to {
+   stroke-dashoffset: 0;
+ }
+}
+    </style>
+
+</head>
+
+<body>
+
+
+    <!--  ======================= Start Header Area ============================== -->
+
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                
+                <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="logo"></a>
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets5.lottiefiles.com/datafiles/eAbFb2vqjxlD8oV/data.json"  background="transparent"  speed="1.7"  style="width: 60px; height: 60px;"  loop  autoplay></lottie-player>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./Index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./products.html">products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cart.html">cart</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="./suggestion.html">contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--  ======================= End Header Area ============================== -->
+
+    <!--  ======================= Start Main Area ================================ -->
+    <main class="site-main">
+
+
+        <!--  ======================= Start Banner Area =======================  -->
+        <section class="site-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 site-title">
+                        <h3 class="title-text"></h3>
+                        <h1 class="title-text text-uppercase fonty">Drawing is not what one sees but what one can make others see. Appear <br> in your own colors. </h1>
+                        <h4 class="title-text  ">Find a perfect outfit that will suit your soul and body. we make  <br>any variations that fits your imaganation
+                            .</h4>
+                        <div class="site-buttons">
+                            <div class="d-flex flex-row flex-wrap">
+                                <div ></div>
+                                <button type="button" class="btn button primary-button mr-4 text-uppercase">shop Now</button>
+                                <!-- <button type="button" class="btn button secondary-button text-uppercase">Get cv</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 banner-image">
+                        <svg viewBox="0 0 1000 1000">
+                        </svg>
+                <script src="./js/color.js"></script>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  ======================= End Banner Area =======================  -->
+        <!-- <section class="about-area">
+            <div class="container">
+        <svg viewBox="0 0 1000 1000">
+        </svg>
+<script src="./js/color.js"></script>
+</div>
+</section> -->
+        <!--  ========================= About Area ==========================  -->
+
+        <section class="about-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-image artline ">
+                            <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player width="500px" src="https://assets8.lottiefiles.com/packages/lf20_sen1ai7d.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                             -->
+<!-- <img src="./img/about-us.png" alt="About us" class="img-fluid"> -->
+                            <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_ZQhQzO.json"  background="transparent"  speed="1"  style="width: 500px; height: 500px;" hover loop  autoplay></lottie-player> -->
+
+<!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets4.lottiefiles.com/datafiles/Hum2XUrsHz6ncPp/data.json"  background="transparent"  speed="0.5"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player> -->
+<svg  class="svg2" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 311.45 500.02">
+    <title>lineart</title>
+    <path d="M440.67,242s15.33,53.33,18.67,68,12.66,35.65,13.33,45.33C474,374.5,517.29,425,537.33,444c16.19,15.31,42.59,24.73,63.17,27.5,26,3.5,54.17-14.17,66.83-24.17s32.67-33.33,44-44.67,20-24,23.33-34.67c3.41-10.83,0-65.33,0-65.33L735,288v-8s-6.3-16.67-23-13.33S672,288,668.67,319.33s6.67,48,6.67,48-4.62-2.39-10.33-4.58c-3.62-1.39-11.73-6.7-14.83-9.83-8-8.08-15.17-15.08-24.42-14.17-11.3,1.12-10.15,5.2-17.08,5.5-9.5.42-17.33-6.92-25.33-5.58S570,347.33,558,355.33s-18.42,12.08-18.42,12.08,17.75.58,23.75-1.42,27.33-8.51,36.67-7.92,20.67,4.59,28,5.26S652.67,366,652.67,366l11.83.92s-7.17,13.42-14.17,19.75-10,12-19.67,13-15-2.33-19-1.33S599,401.67,591.33,401s-22.33-8-26.67-14.33-16-12.33-16-12.33,8-6.67,21.67-6.33,26,6.33,40.33,6,24-5,33-5,24,3.67,31,14,1.33,31.67-6.33,38-22.67,19.67-22.67,19.67-24.33-23-43.33-19.67-32.67,7.67-38.33,16-16.67,28.33-16.67,28.33-23.33-10-32-22.67a90.28,90.28,0,0,0-18-19.67l1,97s2.33,6-4,14S479,553,470,556.33s-15.67,6.33-19,11-4,6.67-4,6.67,30.67,5,41.67,14.67,21,19.33,25.33,27S546.67,659,552.33,664s33.33,32,60.67,31.67,60.67-11,76.67-54.33,23.33-48.67,30-53.67,30-11,30-11-22.33-41-26-72.33-5-87.67-5-87.67S692,453,677,466.67s-56.67,58-62.33,114.33c-5.64,56.11,2.67,160.67,2.67,160.67" transform="translate(-439.71 -241.72)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+ 
+   </svg>
+<!-- 
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_vlev6uqu.json"  background="transparent"  speed="1"  style="width: 500px; height: 300px;"  loop  autoplay></lottie-player> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 about-title">
+                        
+                        <h2 class="text-uppercase ">
+<!--                             
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="war" src="https://assets4.lottiefiles.com/datafiles/Hum2XUrsHz6ncPp/data.json"  background="transparent"  speed="0.5"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player> -->
+                            <span class="fonty2"> store</span>
+                            <span>for your sophisticated </span>
+                            <span>style</span>
+                        </h2>
+                        <div class="paragraph py-4 w-75">
+                            <p class="para">
+                                We aren't doing outargeous fashion , we make classic and special things to make everyone special.
+                             </p>
+                            <p class="para">
+                                Perfect finish best materials.
+                            </p>
+                           
+                        </div>
+                        <button type="button" class="btn button primary-button text-uppercase">contact us</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  ========================= End About Area ==========================  -->
+     
+        <!--  ======================== About Me Area ==============================  -->
+
+        <section class="about-area">
+
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div class="about-title">
+                            <h1 class="text-uppercase title-h1">Drawing on any thing</h1>
+                            <p class="para">
+                                We will draw any thing you want on any thing you want.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container carousel py-lg-5">
+                <div class="owl-carousel owl-theme">
+
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img groud">
+                            <!-- <img src="./img/testimonials/t1.jpg" alt="img1" class="img-fluid"> -->
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_qcg9ftim.json"  background="transparent"  speed="2"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                        </div>  
+                    </div>
+                   
+                   
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img groud">
+                            <!-- <img src="./img/testimonials/t1.jpg" alt="img1" class="img-fluid"> -->
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_eiprx0ul.json"  background="transparent"  speed="2"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                        </div> 
+                    </div>
+
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img groud">
+                            <!-- <img src="./img/testimonials/t2.jpg" alt="img2" class="img-fluid"> -->
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_nrcbujfp.json"  background="transparent"  speed="2"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                        </div>
+                    </div>
+
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img groud">
+                            <!-- <img src="./img/testimonials/t1.jpg" alt="img1" class="img-fluid"> -->
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_qcg9ftim.json"  background="transparent"  speed="2"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                        </div>  
+                    </div>
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img groud">
+                            <!-- <img src="./img/testimonials/t2.jpg" alt="img2" class="img-fluid"> -->
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_nrcbujfp.json"  background="transparent"  speed="2"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!--  ======================== End About Me Area ==============================  -->
+        
+        <!--  ====================== Start Services Area =============================  -->
+
+        <section class="services-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center services-title">
+                        <h1 class="text-uppercase title-text">Services Offers</h1>
+                        <p class="para">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour
+                        </p>
+                    </div>
+                </div>
+                <div class="container services-list">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="services">
+                                <div class="sevices-img text-center py-4">
+                                    <!-- <img src="./img/services/s2.png" alt="Services-2"> -->
+                                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_ptfmfsxt.json"  background="transparent"  speed="1.5"  style="width: 250px; height: 250px;"  loop autoplay></lottie-player>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase font-roboto">Fast Delivery</h5>
+                                    <p class="card-text text-secondary">
+                                        shop online and get orders delivered to your home in fast as 1 day.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="services">
+                                <div class="sevices-img text-center py-4">
+                                    <!-- <img src="./img/services/s4.png" alt="Services-4"> -->
+                                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_YmKbXU.json"  background="transparent"  speed="0.6"  style="width: 250px; height: 270px;"  loop  autoplay></lottie-player>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase font-roboto">good Quality</h5>
+                                    <p class="card-text text-secondary">
+                                        good quality and good price for your sophisticated style.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="services">
+                                <div class="sevices-img text-center py-4">
+                                    <!-- <img src="./img/services/s3.png" alt="Services-3"> -->
+                                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets3.lottiefiles.com/packages/lf20_mpmR6B.json"  background="transparent"  speed="2"  style="width: 270px; height: 270px;"  loop  autoplay></lottie-player>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase font-roboto">esay payment</h5>
+                                    <p class="card-text text-secondary">
+                                        you can pay by cash or kent as you like.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="services">
+                                <div class="sevices-img text-center py-4">
+                                    <!-- <img src="./img/services/s4.png" alt="Services-4"> -->
+                                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_rkdau0ce.json"  background="transparent"  speed="3"  style="width: 300px; height: 270px;"  loop  autoplay></lottie-player>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase font-roboto">relax and shop</h5>
+                                    <p class="card-text text-secondary">
+                                        shoping online at any where and you can shop for a gifts.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  ====================== End Services Area =============================  -->
+
+       
+        <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_yfZAoe.json"  background="transparent"  speed="0.4"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player> -->
+        <!--  ========================== Subscribe me Area ============================  -->
+        <section class="subscribe-us-area">
+            <div class="container subscribe">
+                <div class="row">
+                    <div class="col-lg-12 text-center subscribe-title">
+                        <h4 class="text-uppercase">Get Update From anywhere</h4>
+                        <p class="para">Get News and offers by Email </p>
+                    </div>
+                    
+                </div>
+                <div class="d-sm-flex justify-content-center">
+                    <form class="w-50">
+                        <div class="row d-flex flex-row flex-wrap">
+                            <div class="col input-textbox">
+                                <input type="text" id="txtemail" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col">
+                                <div class="btn-submit">
+                                    <button type="submit" class="btn btn-success float-right">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        
+        <!--  ========================== End Subscribe me Area ============================  -->
+
+
+    </main>
+    <!--  ======================= End Main Area ================================ -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="">
+                <div class="site-logo text-center py-4">
+                    <a href="#"><img src="./img/logo.png" alt="logo"></a>
+                </div>
+                <div class="social text-center">
+                    <h5 class="text-uppercase">Follow us</h5>
+                    <p class="para">Let us be Social</p>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="copyrights text-center">
+                    <p class="para">
+                        Copyright ©2021 All rights reserved | This store is made with by
+                        <a href="#"><span style="color: var(--primary-color);">Haya</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Jquery js file  -->
+    <script src="./js/jquery.3.4.1.js"></script>
+
+    <!--  Bootstrap js file  -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!--  isotope js library  -->
+    <script src="./vendor/isotope/isotope.min.js"></script>
+
+    <!--  Magnific popup script file  -->
+    <script src="./vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!--  Owl-carousel js file  -->
+    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!--  custom js file  -->
+    <script src="./js/main.js"></script>
+
+    <script src="lottie.js"></script>
+    <script >
+
+lottieanimation("Office Desk-animated-illustration.json" , 'anim');
+        function lottieanimation(path , id){
+    var animation = bodymovin.loadAnimation({
+        container: document.getElementById('anim'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: path
+    })
+}
+    </script>
+
+</body>
+
+</html>

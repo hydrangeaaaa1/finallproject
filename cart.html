@@ -1,0 +1,465 @@
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Checkout Card</title>
+     
+ <!-- library validate -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.js"></script>
+     <!--  Bootstrap css file  -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+ 
+     <!--  font awesome icons  -->
+     <link rel="stylesheet" href="./css/all.min.css">
+ 
+ 
+     <!--  Magnific Popup css file  -->
+     <link rel="stylesheet" href="./vendor/Magnific-Popup/dist/magnific-popup.css">
+ 
+ 
+     <!--  Owl-carousel css file  -->
+     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
+     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
+ 
+ 
+     <!--  custom css file  -->
+     <link rel="stylesheet" href="./css/style.css">
+ 
+     <!--  Responsive css file  -->
+     <link rel="stylesheet" href="./css/responsive.css">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- 
+<title>Checkout Card</title>
+    <link href='https://www.soengsouy.com/favicon.ico' rel='icon' type='image/x-icon'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="./css/stylesugg.css">
+     <!-- <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase.js"></script> -->
+     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+     <!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script> -->
+     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+   
+<style>
+.body1 {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 8px;
+  /* margin: 100px; */
+  /* display: flex;
+  margin: 100px; */
+}
+.error {
+    color: red;
+    border-color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  /* margin: 0 -16px 16px 10px; */
+  margin: 0 -10px;
+  /* width: 1000px; */
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container1 {
+  background-color: #f2f2f2;
+  padding: 3px 18px 13px 18px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  box-shadow: 0 0 2rem 0 rgba(168, 180, 194, 0.37);
+}
+
+.input1[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn1 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn1:hover {
+  background-color: #45a049;
+}
+
+.a1 {
+  color: #2196F3;
+}
+
+.hr1 {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+.items_table {
+display: flex;
+/* background: chartreuse; */
+justify-content: center;
+ margin: auto;
+ /* text-align: center; */
+ width: 800px;
+ /* padding: 50px; */
+}
+.items_table2 {
+/* padding: 50px; */
+
+}
+.payment{
+    display: flex;
+/* background: chartreuse; */
+justify-content: center;
+align-content: center;
+/* display: block; */
+
+}
+.vv{
+  /* background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%); */
+  background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  /* The Close Button */
+  /* .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  } */
+  .ce{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+</style>
+ 
+ </head>
+ 
+ <body  onload="doShowAll();  ">
+ 
+ 
+ <!--  ======================= Start Header Area ============================== -->
+
+  <header class="header_area">
+    <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mr-auto"></div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./products.html">products </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./cart.html">cart <span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="./suggestion.html">contact</a>
+                  </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+ <!--  ======================= end Header Area ============================== -->
+<main  >
+  <section class="items_table">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ybDCvD.json"  background="transparent"  speed="0.8"  style="width: 700px; height: 500px;"  loop  autoplay></lottie-player>
+</section>
+    <section>
+      
+    <div  class="container2 ">
+        <h1 class="brand"> Payment Information </h1>
+        <div class="w">
+          <div  class="contact">
+            <h3>Customer Information</h3>
+            <div class="alert">Your order has been sent</div>
+            <form id="ordersForm">
+              <p>
+                <label>FirstName</label>
+                <input type="text" name="Firstname" id="Firstname" required>
+              </p>
+              <p>
+                <label>Lastname</label>
+                <input type="text" name="Lastname" id="Lastname" required>
+              </p>
+              <p>
+                <label>Email Address</label>
+                <input type="email" name="email" id="email" required>
+              </p>
+              <p>
+                <label>Phone Number</label>
+                <input type="text" name="phone" id="phone" required>
+              </p>
+              <p>
+                <label>City</label>
+                <input type="text" name="city" id="city" required>
+              </p>
+              <p>
+                <label>block</label>
+                <input type="text" name="Block" id="Block" required>
+              </p>
+              <p>
+                <label>street</label>
+                <input type="text" name="Street" id="Street" required>
+              </p>
+              <p>
+                <label>House No</label>
+                <input type="text" name="house" id="house" required>
+              </p>
+              <p class="full">
+                <label>Notes</label>
+                <textarea name="note" rows="5" id="note"></textarea>
+              </p>
+              
+              <div class="payment">
+                <!-- <input type="checkbox" id="1" value="Value1" onclick="selectOnlyThis(this.id)" /> Option 1
+                <input type="checkbox" id="2" value="Value1" onclick="selectOnlyThis(this.id)" /> Option 2 -->
+                <input id="cash" type="checkbox" name="check" value = "cash" onclick="onlyOne(this)" /> <span>cash</span> 
+                <input id="k" type="checkbox" name="check" value = "k" onclick="onlyOne(this)" /> <span>kent (you will recive link to pay)</span> 
+               
+<!--         
+                <button onclick="checkCheckbox()">Submitpay</button> <br> 
+                <h4 style="color:green" id="result"></h3>   
+                  <h4 style="color:red" id="error"></h3> -->
+             
+              </div>
+              <p>
+              <div >
+                <h2>Shopping List</h2>
+                <div class="items_table2">
+                  
+                  <table id="list"></table>
+                  <hr>
+                  <h1 id="total">" 0KD "</h1>
+                  <!-- <label><input type="button" value="Clear" onclick="ClearAll()"> -->
+                      
+              </div>
+              <button type="button" value="Clear" class=" btn btn-primary" onclick="ClearAll()" >clear cart</button>
+                  <!-- * Delete all items</label> -->
+                    <!-- <button class="btn button primary-button text-uppercase" onclick="checkout2()">checkout</button> -->
+                    
+                  </div> 
+                </p>
+                <hr>
+              <p class="full">
+                <button class="btn btn-primary" type='submit'>Checkout</button>
+              </p>
+              <div id="myModal" class="modal">
+    
+                <!-- Modal content -->
+                <div class="modal-content">
+               
+                  <div class="ce">
+                  <!-- <h1> Bravooooo👾🎉..</h1> -->
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets3.lottiefiles.com/packages/lf20_thFEdV.json"  background="transparent"  speed="1"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player>
+                </div>
+              </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+   
+
+<section class="items_table">
+   
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_totrpclr.json"  background="transparent"  speed="1"  style="width: 700px; height: 500px;"  loop  autoplay></lottie-player>
+
+
+        <script>
+            // doShowAll();
+            function checkout2(){
+            alert("your order is being freshly prepared ");   
+            // clearCart();
+            ClearAll();
+
+            }
+            
+        </script>
+       
+</main>
+
+
+
+<footer class="footer-area">
+    <div class="container">
+        <div class="">
+            <div class="site-logo text-center py-4">
+                <a href="#"><img src="./img/logo.png" alt="logo"></a>
+            </div>
+            <div class="social text-center">
+                <h5 class="text-uppercase">Follow us</h5>
+                <p class="para">Let us be Social</p>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="copyrights text-center">
+                <p class="para">
+                    Copyright ©2021 All rights reserved | This store is made with by
+                    <a href="#"><span style="color: var(--primary-color);">Haya</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--  ======================= End Header Area ============================== -->
+
+    <!--  Jquery js file  -->
+    <script src="./js/jquery.3.4.1.js"></script>
+
+    <!--  Bootstrap js file  -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!--  isotope js library  -->
+    <script src="./vendor/isotope/isotope.min.js"></script>
+
+    <!--  Magnific popup script file  -->
+    <script src="./vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!--  Owl-carousel js file  -->
+    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!--  custom js file  -->
+    <script src="./js/main.js"></script>
+    <script src="./js/j.js"></script>
+   <script src="./js/checkout.js"></script>
+<!-- <script>
+    var docData = {
+    stringExample: "Hello world!",
+    booleanExample: true,
+    numberExample: 3.14159265,
+    dateExample: firebase.firestore.Timestamp.fromDate(new Date("December 10, 1815")),
+    arrayExample: [5, true, "hello"],
+    nullExample: null,
+    objectExample: {
+        a: 5,
+        b: {
+            nested: "foo"
+        }
+    }
+};
+db.collection("data").doc("one").set(docData).then(function() {
+    console.log("Document successfully written!");
+});
+</script> -->
+</body>
+
+</html>
